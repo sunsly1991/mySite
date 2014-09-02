@@ -1,0 +1,21 @@
+{
+  "name": "mySite",
+  "version": "0.0.0",
+  "description": "Liyang's Site",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.4.4",
+    "jade": "^1.3.1",
+    "mongoose": "^3.8.12",
+    "node-sass": "^0.9.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "liyang"
+  ],
+  "author": "Liyang",
+  "license": "ISC"
+}

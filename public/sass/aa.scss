@@ -1,0 +1,95 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    min-width: 768px;  
+}
+@mixin block {
+    position: relative;
+    padding: 45px 15px 15px;
+    margin: 0 -15px 15px;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: none;
+    &:after {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 12px;
+        font-weight: bold;
+        color: #bbb;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
+@mixin add-on {
+    display: inline-block;
+    width: 10%;
+    height: 34px;
+    min-width: 16px;
+    padding: 6px 5px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    text-align: center;
+    text-shadow: 0 1px 0 #fff;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    vertical-align: top;
+}
+.error-msg {
+    color: red;
+    padding-top: 7px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.block-total {
+    @include block;
+    &:after {
+        content: '总账';
+    }
+}
+
+.block-form {
+    @include block;
+    &:after {
+        content: '记账';
+    }
+    .add-before {
+        @include add-on;
+        margin-right: -1px;
+        -webkit-border-radius: 4px 0 0 4px;
+        -moz-border-radius: 4px 0 0 4px;
+        border-radius: 4px 0 0 4px;
+    }
+    .add-input {
+        display: inline-block;
+        width: 75%;
+        border-radius: 0px;
+    }
+    .add-after {
+        @include add-on;
+        width: 15%;
+        margin-left: -1px;
+        -webkit-border-radius: 0 4px 4px 0;
+        -moz-border-radius: 0 4px 4px 0;
+        border-radius: 0 4px 4px 0;
+    }
+    .check-all {
+        margin-left: 10px;
+    }
+}
+
+.block-list {
+    @include block;
+    max-height: 500px;
+    overflow-x: scroll;
+    &:after {
+        content: '明细';
+    }
+
+}
+
